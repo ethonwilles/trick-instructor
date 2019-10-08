@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div className="wrapper-div">
+        <form>
+          <img src={require("./assets/snap3.png")} />
+          <h1>Log in to Snapchat</h1>
+          <div className="input-box">
+            <p>Username or Email</p>
+            <input type="text" />
+          </div>
+
+          <div className="input-box">
+            <p>Password</p>
+            <input type="text" />
+            <div className="forgot">
+              <div></div>
+              <p className="forgotp">Forgot Password</p>
+            </div>
+          </div>
+
+          <button type="submit">Log In</button>
+        </form>
+        <h2>
+          New To Snapchat? <a href="#">Sign Up</a>
+        </h2>
+      </div>
+    );
+  }
 }
-
-export default App;
